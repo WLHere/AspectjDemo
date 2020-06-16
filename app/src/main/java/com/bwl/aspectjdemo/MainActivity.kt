@@ -1,10 +1,10 @@
 package com.bwl.aspectjdemo
 
 import android.os.Bundle
-import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatActivity
 import com.bwl.aspectjdemo.ui.main.MainFragment
 import com.bwl.libaspectj.annotation.DebugTrace
+import com.bwl.mylibrary2.Test
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,13 +17,6 @@ class MainActivity : AppCompatActivity() {
                     .replace(R.id.container, MainFragment.newInstance())
                     .commitNow()
         }
-        ClassJ().doSomething()
-        haha()
-    }
-
-    @DebugTrace
-    @Keep
-    fun haha() {
-
+        Test.test()
     }
 }
